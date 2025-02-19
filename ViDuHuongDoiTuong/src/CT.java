@@ -1,20 +1,24 @@
+import java.util.ArrayList;
 
 public class CT {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//Tao ra 2 SP
-		SanPham sp1 = new SanPham();
-		SanPham sp2 = new SanPham(2,"Bánh chuối","Đồ ăn nhanh","bc.jpg");
-		sp1.setMaSP(1);
-		sp1.setTenSP("BiaSG");
-		sp1.setLoaiSP("Do uong co con");
-		sp1.setAnhSP("sg.png");
-		// in ra man hinh thong tin 2 sp
-		String thongtinSP1 = sp1.toString();
-		String thongtinSP2 = "Ma SP2 la:" + sp2.getMaSP();
-		       thongtinSP2 +=  "Ten SP2 la:" + sp2.getTenSP();
-		System.out.print(thongtinSP1);
-		System.out.print(thongtinSP2);
+		//Khai báo ds san pham
+		ArrayList<SanPham> dsSanPham;
+		dsSanPham = new ArrayList<SanPham>();
+		//Nhap 3 sp
+		SanPham sp1 = new SanPham(0,"Kem","Giai Khat",null);
+		SanPham sp2 = new SanPham(1,"Keo","An nhanh",null);
+		SanPham sp3 = new SanPham(3,"Com","Do An",null);
+		//Them vao list
+		dsSanPham.add(sp1);
+		dsSanPham.add(sp2);
+		dsSanPham.add(sp3);
+		//for (SanPham x: dsSanPham)
+		//	System.out.println(x.toString());
+		for (int i=0 ; i<dsSanPham.size(); i++) {
+			SanPham sp = dsSanPham.get(i);
+			System.out.println(sp.toString());
+		}
 	}
 }
